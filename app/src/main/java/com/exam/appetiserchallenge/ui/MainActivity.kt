@@ -47,11 +47,6 @@ class MainActivity : AppCompatActivity() {
         loadItunesData()
     }
 
-    override fun onResume() {
-        mainViewModel.clearLastScreen()
-        super.onResume()
-    }
-
     private fun ActivityMainBinding.setupUi() {
 
         ivSearch.setOnClickListener {
@@ -77,6 +72,7 @@ class MainActivity : AppCompatActivity() {
             binding.rvTrackList.itemAnimator = DefaultItemAnimator()
             mainViewModel.loadData()
         }
+        mainViewModel.clearLastScreen()
     }
 
     private fun loadItunesData() {
