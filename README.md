@@ -26,15 +26,15 @@ APK download Link : [AppetiserChallenge](https://drive.google.com/file/d/1dabmUR
 
 #### Light and Dark mode Screen
 
-<img src="https://github.com/user-attachments/assets/7fa05f16-f0b0-4635-8f80-3bae6e0a37e3" />
+![Screens](https://github.com/user-attachments/assets/7fa05f16-f0b0-4635-8f80-3bae6e0a37e3)
 
 #### Screen with Last Visited Date at Header
 
-<img src="https://github.com/user-attachments/assets/0edf5743-a2b2-46fe-b01b-52ee514f89f2" />
+![Screen with Last visited date](https://github.com/user-attachments/assets/0edf5743-a2b2-46fe-b01b-52ee514f89f2)
 
 #### Search Screen
 
-<img src="https://github.com/user-attachments/assets/ccc7730d-1d65-4baf-a18c-003bf44360d6" />
+![search](https://github.com/user-attachments/assets/ccc7730d-1d65-4baf-a18c-003bf44360d6)
 
 ## Github Repository
 
