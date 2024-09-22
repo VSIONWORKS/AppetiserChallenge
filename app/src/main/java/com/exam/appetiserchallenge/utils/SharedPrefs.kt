@@ -2,7 +2,7 @@ package com.exam.appetiserchallenge.utils
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.exam.appetiserchallenge.utils.Contants.PREFS_NAME
+import com.exam.appetiserchallenge.utils.Constants.PREFS_NAME
 
 class SharedPrefs(context: Context) {
 

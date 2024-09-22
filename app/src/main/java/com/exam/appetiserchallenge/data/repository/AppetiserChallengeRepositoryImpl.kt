@@ -5,9 +5,9 @@ import com.exam.appetiserchallenge.data.model.TrackModel
 import com.exam.appetiserchallenge.data.service.ApiService
 import com.exam.appetiserchallenge.domain.AppetiserChallengeRepository
 import com.exam.appetiserchallenge.domain.dao.TrackDao
-import com.exam.appetiserchallenge.utils.Contants.CURRENT_DATE
-import com.exam.appetiserchallenge.utils.Contants.LAST_SCREEN
-import com.exam.appetiserchallenge.utils.Contants.LAST_VISIT_DATE
+import com.exam.appetiserchallenge.utils.Constants.CURRENT_DATE
+import com.exam.appetiserchallenge.utils.Constants.LAST_SCREEN
+import com.exam.appetiserchallenge.utils.Constants.LAST_VISIT_DATE
 import com.exam.appetiserchallenge.utils.SharedPrefs
 import com.exam.appetiserchallenge.utils.get
 import com.exam.appetiserchallenge.utils.getFormattedDate

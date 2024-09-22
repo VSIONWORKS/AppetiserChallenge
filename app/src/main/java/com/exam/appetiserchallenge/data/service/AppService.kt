@@ -1,8 +1,8 @@
 package com.exam.appetiserchallenge.data.service
 
 import com.exam.appetiserchallenge.data.model.ItunesDataModel
-import com.exam.appetiserchallenge.utils.Contants.BASE_URL
-import com.exam.appetiserchallenge.utils.Contants.FETCH_URL
+import com.exam.appetiserchallenge.utils.Constants.BASE_URL
+import com.exam.appetiserchallenge.utils.Constants.FETCH_URL
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

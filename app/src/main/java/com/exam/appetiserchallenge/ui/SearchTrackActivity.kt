@@ -2,7 +2,6 @@ package com.exam.appetiserchallenge.ui
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
@@ -13,7 +12,7 @@ import com.exam.appetiserchallenge.data.model.TrackModel
 import com.exam.appetiserchallenge.databinding.ActivitySearchTrackBinding
 import com.exam.appetiserchallenge.ui.item.TrackItem
 import com.exam.appetiserchallenge.ui.viewModel.SearchTrackViewModel
-import com.exam.appetiserchallenge.utils.Contants
+import com.exam.appetiserchallenge.utils.Constants
 import com.exam.appetiserchallenge.utils.SearchEnum
 import com.exam.appetiserchallenge.utils.collectOnChange
 import com.xwray.groupie.GroupAdapter
@@ -31,10 +30,10 @@ class SearchTrackActivity : AppCompatActivity() {
     private var onItemClick = false
 
     private val activityLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-        if (result.resultCode == Contants.TRACK_RESULT_CODE && result.data != null) {
+        if (result.resultCode == Constants.TRACK_RESULT_CODE && result.data != null) {
             result.data?.let {
-                val trackId = it.getLongExtra(Contants.TRACK_ID, 0L)
-                val isFavorite = it.getBooleanExtra(Contants.IS_FAVORITE, false)
+                val trackId = it.getLongExtra(Constants.TRACK_ID, 0L)
+                val isFavorite = it.getBooleanExtra(Constants.IS_FAVORITE, false)
                 viewModel.setTrackToFavorite(FavoriteTrackModel(trackId, isFavorite))
                 updateRvItem(trackId, isFavorite)
             }
@@ -138,7 +137,7 @@ class SearchTrackActivity : AppCompatActivity() {
     private fun navigateToTrackDetails(track: TrackModel) {
         val intent = Intent(this, TrackViewActivity::class.java)
         val trackDetails = Json.encodeToString(track)
-        intent.putExtra(Contants.TRACK_DETAILS, trackDetails)
+        intent.putExtra(Constants.TRACK_DETAILS, trackDetails)
         activityLauncher.launch(intent)
     }
 
@@ -155,7 +154,7 @@ class SearchTrackActivity : AppCompatActivity() {
 
     override fun finish() {
         val i = Intent()
-        setResult(Contants.TRACK_REFRESH_CODE, i)
+        setResult(Constants.TRACK_REFRESH_CODE, i)
         super.finish()
     }
 }

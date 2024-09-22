@@ -1,6 +1,6 @@
 package com.exam.appetiserchallenge.utils
 
-object Contants {
+object Constants {
 
     const val BASE_URL = "https://itunes.apple.com/"
     const val FETCH_URL = "search?term=star&country=au&media=movie&;all"

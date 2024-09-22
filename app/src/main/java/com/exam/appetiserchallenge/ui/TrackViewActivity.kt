@@ -8,10 +8,10 @@ import com.exam.appetiserchallenge.data.model.FavoriteTrackModel
 import com.exam.appetiserchallenge.data.model.TrackModel
 import com.exam.appetiserchallenge.databinding.ActivityTrackViewBinding
 import com.exam.appetiserchallenge.ui.viewModel.TrackViewViewModel
-import com.exam.appetiserchallenge.utils.Contants.IS_FAVORITE
-import com.exam.appetiserchallenge.utils.Contants.TRACK_DETAILS
-import com.exam.appetiserchallenge.utils.Contants.TRACK_ID
-import com.exam.appetiserchallenge.utils.Contants.TRACK_RESULT_CODE
+import com.exam.appetiserchallenge.utils.Constants.IS_FAVORITE
+import com.exam.appetiserchallenge.utils.Constants.TRACK_DETAILS
+import com.exam.appetiserchallenge.utils.Constants.TRACK_ID
+import com.exam.appetiserchallenge.utils.Constants.TRACK_RESULT_CODE
 import com.exam.appetiserchallenge.utils.load
 import com.exam.appetiserchallenge.utils.setTint
 import kotlinx.serialization.decodeFromString

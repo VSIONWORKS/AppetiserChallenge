@@ -3,7 +3,7 @@ package com.exam.appetiserchallenge.base
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.exam.appetiserchallenge.utils.Contants.THROWABLE
+import com.exam.appetiserchallenge.utils.Constants.THROWABLE
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.launch

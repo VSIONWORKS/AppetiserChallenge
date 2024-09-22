@@ -2,7 +2,6 @@ package com.exam.appetiserchallenge.ui
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
@@ -14,13 +13,13 @@ import com.exam.appetiserchallenge.data.model.TrackModel
 import com.exam.appetiserchallenge.databinding.ActivityMainBinding
 import com.exam.appetiserchallenge.ui.item.TrackItem
 import com.exam.appetiserchallenge.ui.viewModel.MainViewModel
-import com.exam.appetiserchallenge.utils.Contants.IS_FAVORITE
-import com.exam.appetiserchallenge.utils.Contants.LAST_VISITED
-import com.exam.appetiserchallenge.utils.Contants.NETWORK_ERROR
-import com.exam.appetiserchallenge.utils.Contants.TRACK_DETAILS
-import com.exam.appetiserchallenge.utils.Contants.TRACK_ID
-import com.exam.appetiserchallenge.utils.Contants.TRACK_REFRESH_CODE
-import com.exam.appetiserchallenge.utils.Contants.TRACK_RESULT_CODE
+import com.exam.appetiserchallenge.utils.Constants.IS_FAVORITE
+import com.exam.appetiserchallenge.utils.Constants.LAST_VISITED
+import com.exam.appetiserchallenge.utils.Constants.NETWORK_ERROR
+import com.exam.appetiserchallenge.utils.Constants.TRACK_DETAILS
+import com.exam.appetiserchallenge.utils.Constants.TRACK_ID
+import com.exam.appetiserchallenge.utils.Constants.TRACK_REFRESH_CODE
+import com.exam.appetiserchallenge.utils.Constants.TRACK_RESULT_CODE
 import com.exam.appetiserchallenge.utils.LoadState
 import com.exam.appetiserchallenge.utils.collectOnChange
 import com.exam.appetiserchallenge.utils.getFormattedDate
