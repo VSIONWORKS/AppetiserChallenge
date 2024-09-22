@@ -16,6 +16,12 @@ This project is for Appetiser App coding challenge pre-employment
 - [Kotlinx Serializer] - Used for decoding JSON response into Kotlin data class.
 - [Glide] - For fast and efficient loading of images from network.
 
+
+## Architecture
+
+I used MVVM pattern for this project to clearly apply the separation of concerns between business logic and UI.
+And also chose this pattern for easy testing and maintaining of codes.
+
 ## Installation
 
 Github release : [AppetiserChallenge](https://github.com/VSIONWORKS/AppetiserChallenge/releases/tag/v1.0)
