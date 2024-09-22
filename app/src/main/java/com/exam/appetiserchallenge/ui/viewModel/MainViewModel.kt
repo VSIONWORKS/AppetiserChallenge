@@ -22,7 +22,6 @@ class MainViewModel(private val repository: AppetiserChallengeRepository) : Base
     override val lastVisitDate = _lastVisitDate.asStateFlow()
     override val itunesDataFromDatabase = _itunesDataFromDatabase.asStateFlow()
 
-
     init {
         getLastScreen()
         loadData()

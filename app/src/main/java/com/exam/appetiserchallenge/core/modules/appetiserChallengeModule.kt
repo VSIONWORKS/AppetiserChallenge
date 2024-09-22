@@ -11,7 +11,12 @@ import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 /**
- * Dependency module for [AppetiserChallengeRepository] and [MainViewModel]
+ * Dependency module for ff:
+ * [SharedPrefs],
+ * [AppetiserChallengeRepository],
+ * [MainViewModel],
+ * [SearchTrackViewModel],
+ * [MainViewModel]
  * */
 val appetiserChallengeModule = module {
     factory{ SharedPrefs(androidContext()) }

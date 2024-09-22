@@ -5,7 +5,7 @@ import com.exam.appetiserchallenge.core.modules.appModules
 import org.koin.android.ext.koin.androidContext
 
 /**
- * Dependency injection core setup
+ * Dependency injection core setup using Koin
  * */
 class AppetiserChallenge : Application() {
     override fun onCreate() {
