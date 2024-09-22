@@ -35,4 +35,3 @@ APK download Link : [AppetiserChallenge](https://drive.google.com/file/d/1dabmUR
 #### Search Screen
 
 ![search](https://github.com/user-attachments/assets/ccc7730d-1d65-4baf-a18c-003bf44360d6)
- project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
