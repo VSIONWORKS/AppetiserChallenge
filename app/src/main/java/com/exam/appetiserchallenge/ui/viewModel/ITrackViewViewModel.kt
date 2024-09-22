@@ -1,0 +1,10 @@
+package com.exam.appetiserchallenge.ui.viewModel
+
+import com.exam.appetiserchallenge.data.model.FavoriteTrackModel
+import com.exam.appetiserchallenge.data.model.TrackModel
+
+interface ITrackViewViewModel {
+
+    fun saveCurrentScreen(track: TrackModel)
+    fun saveFavoriteItem(favorite: FavoriteTrackModel)
+}
