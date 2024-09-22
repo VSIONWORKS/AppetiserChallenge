@@ -8,10 +8,16 @@ import com.exam.appetiserchallenge.utils.flowTo
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 
+/**
+ * Serves as ViewModel for SearchTrackActivity.
+ * */
 class SearchTrackViewModel(private val repository: AppetiserChallengeRepository) : BaseViewModel(), ISearchTrackViewModel {
 
     override val itunesDataFromDatabase = MutableStateFlow<List<TrackModel>>(emptyList())
 
+    /**
+     * Method searching track from room database
+     * */
     override fun searchTrack(trackName: String) {
         safeLaunch(Dispatchers.IO) {
             val name = "%$trackName%"
@@ -19,5 +25,8 @@ class SearchTrackViewModel(private val repository: AppetiserChallengeRepository)
         }
     }
 
+    /**
+     * Method for setting the favorite status of a selected track.
+     * */
     override fun setTrackToFavorite(favorite: FavoriteTrackModel) = safeLaunch(Dispatchers.IO) { repository.setTrackToFavorite(favorite) }
 }

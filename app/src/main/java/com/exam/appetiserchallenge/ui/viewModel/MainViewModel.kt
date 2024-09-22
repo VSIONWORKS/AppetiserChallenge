@@ -9,6 +9,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
+/**
+ * Serves as main ViewModel for MainActivity.
+ * */
 class MainViewModel(private val repository: AppetiserChallengeRepository) : BaseViewModel(), IMainViewModel {
 
     private val _itunesDataFromDatabase = MutableStateFlow(listOf(TrackModel()))
@@ -22,12 +25,19 @@ class MainViewModel(private val repository: AppetiserChallengeRepository) : Base
     override val lastVisitDate = _lastVisitDate.asStateFlow()
     override val itunesDataFromDatabase = _itunesDataFromDatabase.asStateFlow()
 
+    /**
+     * Initialized all methods that are needed when starting the app.
+     * */
     init {
         getLastScreen()
         loadData()
         setLastVisitDate()
     }
 
+    /**
+     * Setup of observable variables to be observe on our ui.
+     * Variables are using Kotlin Flow
+     * */
     override fun loadData() {
         safeLaunch(Dispatchers.IO) {
             isFirstLaunch = false
@@ -38,6 +48,10 @@ class MainViewModel(private val repository: AppetiserChallengeRepository) : Base
         }
     }
 
+    /**
+     * Method for initializing the fetching data from url and
+     * saving to room database
+     * */
     override fun fetchItunesData() {
         safeLaunch(Dispatchers.IO) {
             loadState.value = LoadState.Loading
@@ -46,7 +60,14 @@ class MainViewModel(private val repository: AppetiserChallengeRepository) : Base
         }
     }
 
+    /**
+     * Method for saving the favorite status of a track.
+     * */
     override fun setTrackToFavorite(favorite: FavoriteTrackModel) = safeLaunch(Dispatchers.IO) { repository.setTrackToFavorite(favorite) }
+
+    /**
+     * Method for getting the last screen saved.
+     * */
     override fun getLastScreen() {
         safeLaunch(Dispatchers.IO) {
             loadState.value = LoadState.Loading
@@ -55,12 +76,18 @@ class MainViewModel(private val repository: AppetiserChallengeRepository) : Base
         }
     }
 
+    /**
+     * Method for removing the last screen saved
+     * */
     override fun clearLastScreen() {
         safeLaunch(Dispatchers.IO) {
             repository.saveCurrentScreen(TrackModel())
         }
     }
 
+    /**
+     * Method for saving the last visit date.
+     * */
     override fun setLastVisitDate() {
         safeLaunch(Dispatchers.IO) {
             repository.setLastVisitDate()

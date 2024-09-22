@@ -39,6 +39,9 @@ class TrackViewActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Method for displaying the values of [TrackModel] to ui.
+     * */
     private fun ActivityTrackViewBinding.displayTrack(trackDetails: TrackModel) {
         with(trackDetails) {
             this@TrackViewActivity.trackId = trackId
@@ -64,6 +67,9 @@ class TrackViewActivity : AppCompatActivity() {
         trackViewsViewModel.saveCurrentScreen(trackDetails)
     }
 
+    /**
+     * Method for toggling the favorite status of a track.
+     * */
     private fun ActivityTrackViewBinding.toggleFavorite(toggleFavorite: Boolean) {
         isTrackFavorite = toggleFavorite
         ivFavorite.setTint(if (toggleFavorite) R.color.secondary else R.color.base)

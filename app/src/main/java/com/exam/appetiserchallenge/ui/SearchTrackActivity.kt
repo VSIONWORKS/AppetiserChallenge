@@ -49,6 +49,10 @@ class SearchTrackActivity : AppCompatActivity() {
         binding.setupUi()
     }
 
+    /**
+     * Initialize Search Button listener and Recyclerview setup.
+     * And handling of observables from viewModel.
+     * */
     private fun ActivitySearchTrackBinding.setupUi() {
 
         ivBack.setOnClickListener {
@@ -106,6 +110,9 @@ class SearchTrackActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Method for handling ui and search status.
+     * */
     private fun ActivitySearchTrackBinding.loadSearch(status: SearchEnum) {
         layoutDefault.isVisible = false
         tvNoResult.isVisible = false
@@ -124,6 +131,10 @@ class SearchTrackActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Method for navigating to [TrackViewActivity]
+     * when track is pressed or selected.
+     * */
     private fun navigateToTrackDetails(track: TrackModel) {
         val intent = Intent(this, TrackViewActivity::class.java)
         val trackDetails = Json.encodeToString(track)
@@ -131,6 +142,9 @@ class SearchTrackActivity : AppCompatActivity() {
         activityLauncher.launch(intent)
     }
 
+    /**
+     * Updates the specific item on recyclerview when status of favorite changes.
+     * */
     private fun updateRvItem(trackId: Long, isFavorite: Boolean) {
         body.groups.filterIsInstance<TrackItem>().forEach {
             if (it.track.trackId == trackId) {

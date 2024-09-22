@@ -5,6 +5,9 @@ import com.exam.appetiserchallenge.data.model.TrackModel
 import com.exam.appetiserchallenge.utils.LoadState
 import kotlinx.coroutines.flow.StateFlow
 
+/**
+ * [MainViewModel] interface for overriding of methods and variables
+ * */
 interface IMainViewModel {
     var isFirstLaunch: Boolean
     val loadState: StateFlow<LoadState>

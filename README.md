@@ -8,8 +8,9 @@ This project is for Appetiser App coding challenge pre-employment
 ## Tech
 
 - [Koin] - Used this lightweight dependency injection in providing class parameters and for more maintainable code.
+- [Kotlin Flow] - Used for asynchronous data operation.
 - [Room] - Local database for persistence data locally.
-- [Groupie] - Used this library for easy handling of multipile different view types for recyclerview.
+- [Groupie] - Used this library for easy handling of multiple different view types for recyclerview.
 - [Retrofit] - For simple process of making network requests and handling Responses.
 - [okhttp] - Used for handling the logs of network responses.
 - [Kotlinx Serializer] - Used for decoding JSON response into Kotlin data class.

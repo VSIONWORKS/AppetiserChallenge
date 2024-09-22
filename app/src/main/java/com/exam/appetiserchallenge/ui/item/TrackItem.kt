@@ -8,6 +8,9 @@ import com.exam.appetiserchallenge.utils.load
 import com.exam.appetiserchallenge.utils.setTint
 import com.xwray.groupie.viewbinding.BindableItem
 
+/**
+ * Class for Track Item displayed on the recyclerview list.
+ * */
 class TrackItem(
     var onClickFavorite: (Long, Boolean) -> Unit,
     var onClickView: (TrackModel) -> Unit
@@ -40,6 +43,9 @@ class TrackItem(
         }
     }
 
+    /**
+     * Method for toggling the favorite status of a track.
+     * */
     private fun LayoutItemBinding.toggleFavorite(toggleFavorite: Boolean) {
         isTrackFavorite = toggleFavorite
         track.isFavorite = toggleFavorite

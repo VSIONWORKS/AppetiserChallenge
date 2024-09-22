@@ -47,6 +47,9 @@ class MainActivity : AppCompatActivity() {
         loadItunesData()
     }
 
+    /**
+     * Initialize Search Button listener and Recyclerview setup.
+     * */
     private fun ActivityMainBinding.setupUi() {
 
         ivSearch.setOnClickListener {
@@ -75,6 +78,9 @@ class MainActivity : AppCompatActivity() {
         mainViewModel.clearLastScreen()
     }
 
+    /**
+     * Initialize setup and handing of observables from viewModel.
+     * */
     private fun loadItunesData() {
         with(mainViewModel) {
             itunesDataFromDatabase.collectOnChange(this@MainActivity) {
@@ -117,6 +123,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Method for navigating to [TrackViewActivity]
+     * when track is pressed or selected.
+     * */
     private fun navigateToTrackDetails(track: TrackModel) {
         val intent = Intent(this, TrackViewActivity::class.java)
         val trackDetails = Json.encodeToString(track)
@@ -124,6 +134,9 @@ class MainActivity : AppCompatActivity() {
         activityLauncher.launch(intent)
     }
 
+    /**
+     * Updates the specific item on recyclerview when status of favorite changes.
+     * */
     private fun updateRvItem(trackId: Long, isFavorite: Boolean) {
         body.groups.filterIsInstance<TrackItem>().forEach {
             if (it.track.trackId == trackId) {
@@ -132,6 +145,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Handles the loading state
+     * */
     private fun handleLoadState(state: LoadState) {
         binding.apply {
             when (state) {
