@@ -1,7 +1,7 @@
 # 09162024-john-nueva-android
 
 # AppetiserChallenge App
-## _Appetiser Coding Challenger_
+## _Appetiser Coding Challenge_
 
 This project is for Appetiser App coding challenge pre-employment
 
