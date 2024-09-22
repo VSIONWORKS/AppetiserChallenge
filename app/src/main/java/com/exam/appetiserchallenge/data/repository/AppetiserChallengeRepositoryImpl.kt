@@ -67,6 +67,4 @@ class AppetiserChallengeRepositoryImpl(private val service: ApiService, private 
     override fun search(name: String): Flow<List<TrackModel>> {
         return trackDao.searchTrack(name)
     }
-
-
 }
